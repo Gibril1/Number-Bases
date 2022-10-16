@@ -15,4 +15,16 @@ export class NumberBases {
         }
         return arrays;
     }
+    convertDecimal() {
+        let multiply;
+        let quotient;
+        let arrays = [];
+        while (this.convertible !== 0) {
+            multiply = this.convertible * this.base;
+            quotient = Math.floor(multiply);
+            this.convertible = multiply - quotient;
+            arrays.push(quotient);
+        }
+        return arrays;
+    }
 }

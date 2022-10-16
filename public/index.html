@@ -7,7 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Number Bases</h1>
+    <form id="form">
+        <legend>Number Base Conversion</legend>
+        <div class="form-group">
+            <input 
+                type="number" 
+                placeholder="Enter Number"
+                id="number"
+                class="input"
+                >
+        </div>
+        <div class="form-group">
+            <label for="points">Base</label>
+            <input 
+                type="range"                 id="base" 
+                name="points" 
+                min="0" max="27">
+        </div>
+    </form>
 
     <script type="module" src="app.js"></script>
 </body>

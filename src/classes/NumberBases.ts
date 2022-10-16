@@ -1,9 +1,9 @@
 export class NumberBases {
-    convertible: number
-    base: number
+    convertible: any
+    base: any
     
     constructor(
-        convertible:number, base:number){
+        convertible:any, base:any){
         this.convertible = convertible
         this.base = base
     }
@@ -20,6 +20,19 @@ export class NumberBases {
             arrays.push(remainder) 
         }
 
+        return arrays
+    }
+
+    convertDecimal(){
+        let multiply:number
+        let quotient:number
+        let arrays:number[] = []
+        while(this.convertible !== 0){
+            multiply = this.convertible * this.base
+            quotient = Math.floor(multiply)
+            this.convertible = multiply - quotient
+            arrays.push(quotient)  
+        }
         return arrays
     }
 }
