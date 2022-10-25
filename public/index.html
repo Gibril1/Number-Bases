@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,10 +21,18 @@
         <div class="form-group">
             <label for="points">Base</label>
             <input 
-                type="range"                 id="base" 
+                type="range"                 
                 name="points" 
+                id="base" 
                 min="0" max="27">
         </div>
+        <div class="form-group">
+            <input 
+                type="text" 
+                placeholder="Conversion...."
+                id="number"
+                class="input"
+                >
     </form>
 
     <script type="module" src="app.js"></script>

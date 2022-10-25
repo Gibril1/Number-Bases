@@ -27,7 +27,11 @@ base.addEventListener('input', () => {
         
         
     }else{
-        console.log('Hello')
+        const numberValue = number.value
+        const baseValue = base.value
+
+        const convert = new NumberBases(numberValue, baseValue)
+        console.log(convert.convertInteger())
     }
 })
 
