@@ -8,19 +8,17 @@ base.addEventListener('input', () => {
     const numberValue = number.value;
     const baseValue = base.value;
     if (numberValue.includes('.')) {
-        let integer;
-        let decimal;
-        integer = numberValue.split('.')[0];
-        decimal = "0. " + numberValue.split('.')[1];
-        const convert = new NumberBases(integer, baseValue);
-        console.log(convert.convertInteger());
-        const convertAgain = new NumberBases(decimal, baseValue);
+        let integer = numberValue.split('.')[0];
+        let fractional = '0.' + numberValue.split('.')[1];
+        const convert = new NumberBases(Number(integer), Number(baseValue));
+        console.log(convert);
+        const convertAgain = new NumberBases(Number(fractional), Number(baseValue));
         console.log(convertAgain.convertDecimal());
     }
     else {
         const numberValue = number.value;
         const baseValue = base.value;
-        const convert = new NumberBases(numberValue, baseValue);
+        const convert = new NumberBases(Number(numberValue), Number(baseValue));
         console.log(convert.convertInteger());
     }
 });
