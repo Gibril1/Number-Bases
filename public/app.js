@@ -7,7 +7,12 @@ const base = document.querySelector('#base');
 base.addEventListener('input', () => {
     const numberValue = number.value;
     const baseValue = base.value;
-    if (numberValue.includes('.')) {
+    if (Number(numberValue) > 0 && Number(numberValue) < 1) {
+        console.log(numberValue);
+        const convert = new NumberBases(Number(numberValue), Number(baseValue));
+        console.log(convert.convertDecimal());
+    }
+    if (numberValue.includes('.') && Number(numberValue) > 1) {
         let integer = numberValue.split('.')[0];
         let fractional = '0.' + numberValue.split('.')[1];
         const convert = new NumberBases(Number(integer), Number(baseValue));

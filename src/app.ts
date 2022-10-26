@@ -10,8 +10,14 @@ const base = document.querySelector('#base') as HTMLInputElement
 base.addEventListener('input', () => {
     const numberValue = number.value
     const baseValue = base.value
+
+    if(Number(numberValue) > 0 && Number(numberValue) < 1){
+        console.log(numberValue)
+        const convert = new NumberBases(Number(numberValue), Number(baseValue))
+        console.log(convert.convertDecimal())
+    }
     
-    if (numberValue.includes('.')){
+    if (numberValue.includes('.') && Number(numberValue) > 1){
         let integer = numberValue.split('.')[0]
         let fractional = '0.'+numberValue.split('.')[1]
         
